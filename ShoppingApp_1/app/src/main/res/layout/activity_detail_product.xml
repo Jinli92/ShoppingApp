@@ -4,6 +4,58 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.jinliyu.shoppingapp_1.DetailProductActivity">
+    tools:context="com.example.jinliyu.shoppingapp_1.DetailProductActivity"
+    >
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+
+        app:srcCompat="@mipmap/ic_launcher_round"
+        tools:layout_editor_absoluteX="37dp"
+        tools:layout_editor_absoluteY="85dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Canon EOS Rebel"
+        android:textSize="30dp"
+        tools:layout_editor_absoluteX="37dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/priceTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$599"
+        android:textColor="#d60101"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        tools:layout_editor_absoluteX="222dp"
+        tools:layout_editor_absoluteY="85dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="109dp"
+        android:layout_height="56dp"
+        android:background="#fa661c"
+        android:text="Add to Cart"
+        android:textColor="#ffffff"
+        tools:layout_editor_absoluteX="138dp"
+        tools:layout_editor_absoluteY="236dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item Description"
+        android:textColor="#0083ba"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="327dp" />
+
 
 </android.support.constraint.ConstraintLayout>

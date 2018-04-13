@@ -12,10 +12,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
+import android.widget.ViewFlipper;
 
 public class HomepageActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
+    private ViewFlipper vf;
+ImageView homeicon1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +45,23 @@ public class HomepageActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+
+
+
+
+
+
+//        vf = findViewById(R.id.flipper);
+//        Animation animation = AnimationUtils.loadAnimation(this, R.anim.animation_left);
+//        vf.setInAnimation(animation);
+//        vf.setFlipInterval(3000);
+//        vf.startFlipping();
+
+//
+//        homeicon1 = findViewById(R.id.homeicon1);
+//        homeicon1.setAlpha(100);
     }
 
     @Override

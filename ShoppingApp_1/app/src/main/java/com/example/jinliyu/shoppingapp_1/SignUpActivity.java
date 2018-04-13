@@ -10,9 +10,11 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.android.volley.Request;
+import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -48,23 +50,23 @@ actionBar.hide();
                 String address = addressTxt.getText().toString();
                 String mobile = mobileTxt.getText().toString();
                 String pw = passwordTxt.getText().toString();
-                if(firstname == null || lastname == null|| email == null || address == null|| mobile == null
-                        ||pw == null)
+                if(firstname.equals("") || lastname.equals("")|| email.equals("") || address.equals("")|| mobile.equals("")
+                        ||pw.equals(""))
                 {
                     Toast.makeText(getApplicationContext(),"Can't be empty!",Toast.LENGTH_SHORT).show();
 
                 }
-                if(checkName(firstname)== false || checkName(lastname)== false)
+                else if(checkName(firstname)== false || checkName(lastname)== false)
                 {
                     Toast.makeText(getApplicationContext(),"It's not a valid name!",Toast.LENGTH_SHORT).show();
 
                 }
-                if(checkEmail(email) == false)
+                else if(checkEmail(email) == false)
                 {
                     Toast.makeText(getApplicationContext(),"It's not a valid email!",Toast.LENGTH_SHORT).show();
 
                 }
-if(checkMobile(mobile) == false)
+else if(checkMobile(mobile) == false)
 {
     Toast.makeText(getApplicationContext(),"It's not a valid phone number !",Toast.LENGTH_SHORT).show();
 
@@ -76,7 +78,7 @@ else
                         "shop_reg.php?fname=" + firstname + "&lname=" + lastname+"&address="+address+"& email="+ email+"&mobile="+mobile+"&password="+pw, new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        if(response.equals("successfully registered"))
+                        if(response.contains("successfully registered"))
                         {
                             Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
                             startActivity(intent);
@@ -94,7 +96,8 @@ else
 
                     }
                 });
-
+    RequestQueue requestQueue = Volley.newRequestQueue(SignUpActivity.this);
+    requestQueue.add(stringRequest);
 
 
 
@@ -135,13 +138,14 @@ else
 
     private boolean checkMobile(String mobile)
     {
-        if(mobile.length() != 10)
-            return  false;
-        for(int i = 0; i < mobile.length(); i ++)
+        String regex = "^[0-9]{10}$";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(mobile);
+        if(!matcher.matches())
         {
-            if(mobile.charAt(i) - '0' >9 && mobile.charAt(i) - '0' <0)
-                return false;
+            return false;
         }
+
         return true;
     }
 

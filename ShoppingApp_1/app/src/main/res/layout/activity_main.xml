@@ -1,96 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.jinliyu.shoppingapp_1.MainActivity"
-    tools:layout_editor_absoluteY="81dp">
+    tools:layout_editor_absoluteY="81dp"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="284dp"
-        android:layout_height="42dp"
-
-        android:layout_marginBottom="27dp"
-        android:layout_marginEnd="38dp"
-        android:layout_marginTop="56dp"
+        android:layout_width="282dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="70dp"
         android:fontFamily="monospace"
         android:text="Sign in with mobile"
+        android:textStyle="bold"
         android:textColor="@color/backgroundred"
         android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/editText5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteX="67dp"
+        tools:layout_editor_absoluteY="47dp" />
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="70dp"
+    android:layout_marginLeft="47dp"
+    >
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="41dp"
+        android:layout_height="match_parent"
+        app:srcCompat="@mipmap/phoneicon"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="135dp" />
 
     <EditText
-        android:id="@+id/editText5"
-        android:layout_width="217dp"
-        android:layout_height="34dp"
-        android:layout_marginBottom="30dp"
-        android:background="#ececec"
+        android:id="@+id/mobileTxtLogin"
+        android:layout_width="229dp"
+        android:layout_height="40dp"
+        android:background="@drawable/edittxt_corner"
         android:ems="10"
         android:hint="   Mobile"
         android:inputType="textPersonName"
         android:text=""
-        app:layout_constraintBottom_toTopOf="@+id/editText6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        tools:layout_editor_absoluteX="106dp"
+        tools:layout_editor_absoluteY="128dp" />
 
-    <EditText
-        android:id="@+id/editText6"
-        android:layout_width="217dp"
-        android:layout_height="37dp"
-        android:layout_marginBottom="36dp"
-        android:background="#ececec"
-        android:ems="10"
-        android:hint="   Password"
-        android:inputType="textPersonName"
-        android:text=""
-        app:layout_constraintBottom_toTopOf="@+id/checkBox"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText5" />
+</LinearLayout>
 
 
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="156dp"
-        android:layout_height="40dp"
-        android:layout_marginBottom="22dp"
-        android:text="Remember me"
-        app:layout_constraintBottom_toTopOf="@+id/btnlogin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText6" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="47dp">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="43dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@mipmap/pwicon"
+            tools:layout_editor_absoluteX="29dp"
+            tools:layout_editor_absoluteY="208dp" />
+
+
+        <EditText
+            android:id="@+id/passwordTxtLogin"
+            android:layout_width="229dp"
+            android:layout_height="40dp"
+            android:background="@drawable/edittxt_corner"
+            android:ems="10"
+            android:hint="   Password"
+            android:inputType="textPassword" />
+    </LinearLayout>
+
 
     <Button
         android:id="@+id/btnlogin"
         android:layout_width="139dp"
-        android:layout_height="32dp"
-        android:layout_marginBottom="32dp"
-        android:background="@color/backgroundred"
+        android:layout_height="42dp"
+        android:layout_marginLeft="115dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/corners"
         android:text="sign in"
         android:textColor="#ffffff"
-        app:layout_constraintBottom_toTopOf="@+id/btnsignup"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+        tools:layout_editor_absoluteX="123dp"
+        tools:layout_editor_absoluteY="319dp" />
 
     <Button
         android:id="@+id/btnsignup"
-        android:layout_width="183dp"
-        android:layout_height="37dp"
-        android:layout_marginBottom="62dp"
-        android:background="@color/backgroundred"
+        android:layout_width="182dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="96dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/corners"
         android:text="need an account?"
         android:textColor="#ffffff"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnlogin" />
+        tools:layout_editor_absoluteX="101dp"
+        tools:layout_editor_absoluteY="382dp" />
 
-</android.support.constraint.ConstraintLayout>
+
+
+
+</LinearLayout>

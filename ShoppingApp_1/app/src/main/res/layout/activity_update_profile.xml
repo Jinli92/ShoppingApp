@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jinliyu.shoppingapp_1.UpdateProfileActivity"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="31dp"
+        android:fontFamily="monospace"
+        android:text="     Update your Profile"
+        android:layout_marginLeft="50dp"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/firstnameTxt"
+        app:layout_constraintStart_toStartOf="@+id/firstnameTxt"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/firstnameTxt"
+        android:layout_width="211dp"
+        android:layout_height="33dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginBottom="22dp"
+        android:background="@drawable/edittxt_corner"
+        android:ems="10"
+        android:hint="  First Name"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/lastnameTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/lastnameTxt"
+        android:layout_width="211dp"
+        android:layout_height="31dp"
+        android:layout_marginBottom="22dp"
+        android:layout_marginLeft="70dp"
+        android:background="@drawable/edittxt_corner"
+        android:ems="10"
+        android:hint="  Last Name"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/emailTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstnameTxt" />
+
+
+    <EditText
+        android:id="@+id/addressTxt"
+        android:layout_width="210dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="22dp"
+        android:background="@drawable/edittxt_corner"
+        android:ems="10"
+        android:layout_marginLeft="70dp"
+        android:hint="  Address"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/passwordTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mobileTxt" />
+
+    <EditText
+        android:id="@+id/mobileTxt"
+        android:layout_width="210dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="22dp"
+        android:background="@drawable/edittxt_corner"
+        android:ems="10"
+        android:layout_marginLeft="70dp"
+        android:hint="  Mobile"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/addressTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailTxt" />
+
+    <EditText
+        android:id="@+id/emailTxt"
+        android:layout_width="210dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/edittxt_corner"
+        android:ems="10"
+        android:hint="   Email"
+        android:layout_marginLeft="70dp"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/mobileTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lastnameTxt" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="106dp"
+        android:layout_height="34dp"
+        android:layout_marginLeft="120dp"
+
+        android:layout_marginBottom="60dp"
+        android:background="@color/backgroundred"
+        android:text="Sign Up"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordTxt" />
+
+
+</LinearLayout>
