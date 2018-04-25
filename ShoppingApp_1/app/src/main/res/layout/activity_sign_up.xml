@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.jinliyu.shoppingapp_1.SignUpActivity"
+    tools:context="com.example.jinliyu.shoppingapp_1.activity.SignUpActivity"
     tools:layout_editor_absoluteY="81dp">
 
 
@@ -16,7 +16,7 @@
         android:layout_marginStart="3dp"
         android:layout_marginTop="31dp"
         android:fontFamily="monospace"
-        android:text="Create An Account"
+        android:text=""
         android:textColor="@color/backgroundred"
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/firstnameTxt"
@@ -25,13 +25,13 @@
 
     <EditText
         android:id="@+id/firstnameTxt"
-        android:layout_width="211dp"
-        android:layout_height="33dp"
+        android:layout_width="@dimen/textwidth_signup"
+        android:layout_height="@dimen/textheight_signup"
 
         android:layout_marginBottom="19dp"
-        android:background="#ececec"
+        android:background="@drawable/edittxt_corner"
         android:ems="10"
-        android:hint="  First Name"
+        android:hint="@string/first_name"
         android:text=""
         app:layout_constraintBottom_toTopOf="@+id/lastnameTxt"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,12 +40,12 @@
 
     <EditText
         android:id="@+id/lastnameTxt"
-        android:layout_width="211dp"
-        android:layout_height="31dp"
+        android:layout_width="@dimen/textwidth_signup"
+        android:layout_height="@dimen/textheight_signup"
         android:layout_marginBottom="21dp"
-        android:background="#ececec"
+        android:background="@drawable/edittxt_corner"
         android:ems="10"
-        android:hint="  Last Name"
+        android:hint="@string/last_name"
         android:text=""
         app:layout_constraintBottom_toTopOf="@+id/emailTxt"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,12 +55,12 @@
 
     <EditText
         android:id="@+id/addressTxt"
-        android:layout_width="205dp"
-        android:layout_height="28dp"
+        android:layout_width="@dimen/textwidth_signup"
+        android:layout_height="@dimen/textheight_signup"
         android:layout_marginBottom="20dp"
-        android:background="#ececec"
+        android:background="@drawable/edittxt_corner"
         android:ems="10"
-        android:hint="  Address"
+        android:hint="@string/address"
         android:text=""
         app:layout_constraintBottom_toTopOf="@+id/passwordTxt"
         app:layout_constraintEnd_toEndOf="parent"
@@ -69,12 +69,12 @@
 
     <EditText
         android:id="@+id/mobileTxt"
-        android:layout_width="207dp"
-        android:layout_height="32dp"
+        android:layout_width="@dimen/textwidth_signup"
+        android:layout_height="@dimen/textheight_signup"
         android:layout_marginBottom="14dp"
-        android:background="#ececec"
+        android:background="@drawable/edittxt_corner"
         android:ems="10"
-        android:hint="  Mobile"
+        android:hint="@string/mobilesignup"
         android:text=""
         app:layout_constraintBottom_toTopOf="@+id/addressTxt"
         app:layout_constraintEnd_toEndOf="parent"
@@ -83,12 +83,12 @@
 
     <EditText
         android:id="@+id/emailTxt"
-        android:layout_width="212dp"
-        android:layout_height="29dp"
+        android:layout_width="@dimen/textwidth_signup"
+        android:layout_height="@dimen/textheight_signup"
         android:layout_marginBottom="16dp"
-        android:background="#ececec"
+        android:background="@drawable/edittxt_corner"
         android:ems="10"
-        android:hint="   Email"
+        android:hint="@string/emailsignup"
         android:text=""
         app:layout_constraintBottom_toTopOf="@+id/mobileTxt"
         app:layout_constraintEnd_toEndOf="parent"
@@ -97,13 +97,13 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="106dp"
-        android:layout_height="34dp"
+        android:layout_width="287dp"
+        android:layout_height="43dp"
 
         android:layout_marginBottom="60dp"
-        android:background="@color/backgroundred"
-        android:text="Sign Up"
-        android:textColor="#ffffff"
+        android:background="@drawable/corners"
+        android:text="@string/sign_up"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -111,12 +111,12 @@
 
     <EditText
         android:id="@+id/passwordTxt"
-        android:layout_width="207dp"
-        android:layout_height="28dp"
+        android:layout_width="@dimen/textwidth_signup"
+        android:layout_height="@dimen/textheight_signup"
         android:layout_marginBottom="26dp"
-        android:background="#ececec"
+        android:background="@drawable/edittxt_corner"
         android:ems="10"
-        android:hint="   Password"
+        android:hint="@string/password"
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"

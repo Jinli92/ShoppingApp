@@ -1,16 +1,22 @@
-package com.example.jinliyu.shoppingapp_1;
+package com.example.jinliyu.shoppingapp_1.activity;
 
 import android.content.Intent;
 import android.os.Handler;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class SplashActivity extends AppCompatActivity {
+import com.example.jinliyu.shoppingapp_1.R;
 
+public class SplashActivity extends AppCompatActivity {
+ActionBar actionBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+
+        actionBar = getSupportActionBar();
+        actionBar.hide();
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -19,6 +25,6 @@ public class SplashActivity extends AppCompatActivity {
                 startActivity(itnt);
                 finish();
             }
-        }, 2000);
+        }, 3000);
     }
 }

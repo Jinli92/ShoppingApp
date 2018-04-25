@@ -1,4 +1,4 @@
-package com.example.jinliyu.shoppingapp_1;
+package com.example.jinliyu.shoppingapp_1.activity;
 
 import android.content.Intent;
 import android.support.v7.app.ActionBar;
@@ -15,6 +15,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.jinliyu.shoppingapp_1.R;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -29,7 +30,7 @@ ActionBar actionBar;
         setContentView(R.layout.activity_sign_up);
 
 actionBar = getSupportActionBar();
-actionBar.hide();
+actionBar.setTitle(R.string.createanaccount);
 
         button = findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
@@ -53,7 +54,7 @@ actionBar.hide();
                 if(firstname.equals("") || lastname.equals("")|| email.equals("") || address.equals("")|| mobile.equals("")
                         ||pw.equals(""))
                 {
-                    Toast.makeText(getApplicationContext(),"Can't be empty!",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), R.string.cantbeempty,Toast.LENGTH_SHORT).show();
 
                 }
                 else if(checkName(firstname)== false || checkName(lastname)== false)
@@ -63,14 +64,19 @@ actionBar.hide();
                 }
                 else if(checkEmail(email) == false)
                 {
-                    Toast.makeText(getApplicationContext(),"It's not a valid email!",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), R.string.invalidemail,Toast.LENGTH_SHORT).show();
 
                 }
 else if(checkMobile(mobile) == false)
 {
-    Toast.makeText(getApplicationContext(),"It's not a valid phone number !",Toast.LENGTH_SHORT).show();
+    Toast.makeText(getApplicationContext(), R.string.invalidphone,Toast.LENGTH_SHORT).show();
 
 }
+else if(checkpassword(pw) == false)
+                {
+                    Toast.makeText(getApplicationContext(),"Password length should be >= 6!",Toast.LENGTH_SHORT).show();
+
+                }
 else
 {
 
@@ -147,6 +153,15 @@ else
         }
 
         return true;
+    }
+    private  boolean checkpassword(String password)
+    {
+        if(password.length() <6)
+            return false;
+
+        return true;
+
+
     }
 
 

@@ -1,50 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.jinliyu.shoppingapp_1.MainActivity"
+    tools:context="com.example.jinliyu.shoppingapp_1.activity.MainActivity"
     tools:layout_editor_absoluteY="81dp"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="282dp"
-        android:layout_height="30dp"
-        android:layout_marginLeft="70dp"
-        android:layout_marginTop="70dp"
-        android:fontFamily="monospace"
-        android:text="Sign in with mobile"
-        android:textStyle="bold"
-        android:textColor="@color/backgroundred"
-        android:textSize="20dp"
-        tools:layout_editor_absoluteX="67dp"
-        tools:layout_editor_absoluteY="47dp" />
 
 <LinearLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:layout_marginTop="70dp"
-    android:layout_marginLeft="47dp"
-    >
+    android:layout_marginTop="110dp"
+    android:layout_marginLeft="30dp"
+    android:id="@+id/linearLayout">
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="41dp"
-        android:layout_height="match_parent"
-        app:srcCompat="@mipmap/phoneicon"
-        tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="135dp" />
+    <!--<ImageView-->
+        <!--android:id="@+id/imageView3"-->
+        <!--android:layout_width="50dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--app:srcCompat="@mipmap/phoneicon"-->
+        <!--tools:layout_editor_absoluteX="29dp"-->
+        <!--tools:layout_editor_absoluteY="135dp" />-->
 
     <EditText
         android:id="@+id/mobileTxtLogin"
-        android:layout_width="229dp"
-        android:layout_height="40dp"
+        android:layout_width="247dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="37dp"
         android:background="@drawable/edittxt_corner"
         android:ems="10"
-        android:hint="   Mobile"
+        android:hint="@string/login_mobile"
         android:inputType="textPersonName"
         android:text=""
         tools:layout_editor_absoluteX="106dp"
@@ -57,54 +45,81 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="47dp">
+        android:layout_marginTop="170dp"
+        android:layout_marginLeft="30dp"
+        android:id="@+id/linearLayout">
 
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="43dp"
-            android:layout_height="match_parent"
-            app:srcCompat="@mipmap/pwicon"
-            tools:layout_editor_absoluteX="29dp"
-            tools:layout_editor_absoluteY="208dp" />
+        <!--<ImageView-->
+            <!--android:id="@+id/imageView4"-->
+            <!--android:layout_width="43dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--app:srcCompat="@mipmap/pwicon"-->
+            <!--tools:layout_editor_absoluteX="29dp"-->
+            <!--tools:layout_editor_absoluteY="208dp" />-->
 
 
         <EditText
             android:id="@+id/passwordTxtLogin"
-            android:layout_width="229dp"
-            android:layout_height="40dp"
+            android:layout_width="247dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="37dp"
             android:background="@drawable/edittxt_corner"
             android:ems="10"
-            android:hint="   Password"
+            android:hint="@string/login_password"
             android:inputType="textPassword" />
     </LinearLayout>
 
 
     <Button
         android:id="@+id/btnlogin"
-        android:layout_width="139dp"
-        android:layout_height="42dp"
-        android:layout_marginLeft="115dp"
-        android:layout_marginTop="100dp"
+        android:layout_width="240dp"
+        android:layout_height="49dp"
+        android:layout_above="@+id/btnsignup"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
         android:background="@drawable/corners"
-        android:text="sign in"
+        android:text="@string/sign_in"
         android:textColor="#ffffff"
         tools:layout_editor_absoluteX="123dp"
         tools:layout_editor_absoluteY="319dp" />
 
     <Button
         android:id="@+id/btnsignup"
-        android:layout_width="182dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="96dp"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/corners"
-        android:text="need an account?"
-        android:textColor="#ffffff"
+        android:layout_width="240dp"
+        android:layout_height="49dp"
+
+        android:layout_alignBottom="@+id/forgotpw"
+        android:layout_alignStart="@+id/btnlogin"
+        android:layout_marginBottom="55dp"
+        android:background="@drawable/corners1"
+        android:text="@string/need_an_account"
+        android:textColor="@color/backgroundred"
         tools:layout_editor_absoluteX="101dp"
         tools:layout_editor_absoluteY="382dp" />
 
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btnlogin"
+        android:layout_below="@+id/linearLayout"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/remember_me"
+        android:textColor="#595656" />
+
+    <TextView
+        android:id="@+id/forgotpw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/checkBox"
+        android:layout_marginBottom="29dp"
+        android:layout_marginStart="47dp"
+        android:text="@string/forgot_password"
+        android:textColor="#9b9a9a"
+        android:textStyle="bold" />
 
 
-
-</LinearLayout>
+</RelativeLayout>

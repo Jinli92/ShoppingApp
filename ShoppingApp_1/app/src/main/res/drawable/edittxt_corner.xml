@@ -11,7 +11,7 @@
     </corners>
 
     <stroke
-        android:color="@color/backgroundred"
+        android:color="#abc789"
         android:width="2dp">
     </stroke>
 

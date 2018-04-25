@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="380dp"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:id="@+id/cartimage"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginEnd="6dp"
+                android:src="@drawable/ic_launcher_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/cartname"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/cartname"
+                android:layout_width="121dp"
+                android:layout_height="99dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="23dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:text="productname"
+                android:textSize="18dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cartnum"
+                app:layout_constraintEnd_toStartOf="@+id/cartprice"
+                app:layout_constraintStart_toEndOf="@+id/cartimage"
+                app:layout_constraintTop_toTopOf="@+id/cartnum" />
+<LinearLayout
+    android:layout_width="90dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginLeft="0dp"
+    android:layout_gravity="right">
+
+    <TextView
+        android:id="@+id/cartprice"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_marginBottom="18dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginTop="10dp"
+        android:text="price"
+        android:textSize="20dp"
+        android:layout_gravity="right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cartname"
+        app:layout_constraintTop_toBottomOf="@+id/cartnum" />
+
+    <TextView
+        android:id="@+id/cartnum"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginBottom="13dp"
+        android:textSize="14dp"
+        android:text="Quantity"
+        app:layout_constraintBottom_toTopOf="@+id/cartprice"
+        app:layout_constraintEnd_toEndOf="@+id/cartprice"
+        app:layout_constraintStart_toStartOf="@+id/cartprice"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

@@ -4,35 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.jinliyu.shoppingapp_1.UpdateProfileActivity"
+    tools:context="com.example.jinliyu.shoppingapp_1.activity.UpdateProfileActivity"
     android:orientation="vertical">
 
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="31dp"
-        android:fontFamily="monospace"
-        android:text="     Update your Profile"
-        android:layout_marginLeft="50dp"
-        android:textStyle="bold"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/firstnameTxt"
-        app:layout_constraintStart_toStartOf="@+id/firstnameTxt"
-        app:layout_constraintTop_toTopOf="parent" />
+    <!--<TextView-->
+        <!--android:id="@+id/textView"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginBottom="40dp"-->
+        <!--android:layout_marginStart="3dp"-->
+        <!--android:layout_marginTop="31dp"-->
+        <!--android:fontFamily="monospace"-->
+        <!--android:text="     Update your Profile"-->
+        <!--android:layout_marginLeft="50dp"-->
+        <!--android:textStyle="bold"-->
+        <!--android:textSize="20dp"-->
+        <!--app:layout_constraintBottom_toTopOf="@+id/firstnameTxt"-->
+        <!--app:layout_constraintStart_toStartOf="@+id/firstnameTxt"-->
+        <!--app:layout_constraintTop_toTopOf="parent" />-->
 
     <EditText
         android:id="@+id/firstnameTxt"
-        android:layout_width="211dp"
-        android:layout_height="33dp"
+        android:layout_width="253dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="12dp"
         android:layout_marginLeft="70dp"
-        android:layout_marginBottom="22dp"
         android:background="@drawable/edittxt_corner"
         android:ems="10"
-        android:hint="  First Name"
+        android:hint="@string/first_name"
         android:text=""
         app:layout_constraintBottom_toTopOf="@+id/lastnameTxt"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,13 +42,13 @@
 
     <EditText
         android:id="@+id/lastnameTxt"
-        android:layout_width="211dp"
-        android:layout_height="31dp"
-        android:layout_marginBottom="22dp"
+        android:layout_width="254dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="12dp"
         android:layout_marginLeft="70dp"
         android:background="@drawable/edittxt_corner"
         android:ems="10"
-        android:hint="  Last Name"
+        android:hint="@string/last_name"
         android:text=""
         app:layout_constraintBottom_toTopOf="@+id/emailTxt"
         app:layout_constraintEnd_toEndOf="parent"
@@ -57,13 +58,13 @@
 
     <EditText
         android:id="@+id/addressTxt"
-        android:layout_width="210dp"
-        android:layout_height="32dp"
-        android:layout_marginBottom="22dp"
+        android:layout_width="254dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="70dp"
         android:background="@drawable/edittxt_corner"
         android:ems="10"
-        android:layout_marginLeft="70dp"
-        android:hint="  Address"
+        android:hint="@string/address"
         android:text=""
         app:layout_constraintBottom_toTopOf="@+id/passwordTxt"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,13 +73,13 @@
 
     <EditText
         android:id="@+id/mobileTxt"
-        android:layout_width="210dp"
-        android:layout_height="32dp"
-        android:layout_marginBottom="22dp"
+        android:layout_width="252dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="70dp"
         android:background="@drawable/edittxt_corner"
         android:ems="10"
-        android:layout_marginLeft="70dp"
-        android:hint="  Mobile"
+        android:hint="@string/mobile"
         android:text=""
         app:layout_constraintBottom_toTopOf="@+id/addressTxt"
         app:layout_constraintEnd_toEndOf="parent"
@@ -87,13 +88,13 @@
 
     <EditText
         android:id="@+id/emailTxt"
-        android:layout_width="210dp"
-        android:layout_height="32dp"
+        android:layout_width="253dp"
+        android:layout_height="46dp"
         android:layout_marginBottom="50dp"
+        android:layout_marginLeft="70dp"
         android:background="@drawable/edittxt_corner"
         android:ems="10"
-        android:hint="   Email"
-        android:layout_marginLeft="70dp"
+        android:hint="@string/email"
         android:text=""
         app:layout_constraintBottom_toTopOf="@+id/mobileTxt"
         app:layout_constraintEnd_toEndOf="parent"
@@ -102,13 +103,12 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="106dp"
-        android:layout_height="34dp"
-        android:layout_marginLeft="120dp"
-
+        android:layout_width="287dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
         android:layout_marginBottom="60dp"
-        android:background="@color/backgroundred"
-        android:text="Sign Up"
+        android:background="@drawable/corners"
+        android:text="@string/updateprofile"
         android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

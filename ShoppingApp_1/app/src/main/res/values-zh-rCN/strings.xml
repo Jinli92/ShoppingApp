@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_settings">设置</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_activity_showsubcategory">ShowsubcategoryActivity</string>
+    <string name="title_activity_product_list">ProductListActivity</string>
+    <string name="forgot_password"><u>忘记密码？</u></string>
+    <string name="delivery_address">送货地址</string>
+    <string name="billing_address">账单地址</string>
+    <string name="mobile">手机号</string>
+    <string name="email">电子邮箱</string>
+    <string name="name">姓名</string>
+    <string name="remember_me">记住我</string>
+    <string name="sign_in">登录</string>
+    <string name="login_password">密码</string>
+    <string name="login_mobile">手机号</string>
+    <string name="need_an_account">没有账号？</string>
+    <string name="total">总价</string>
+    <string name="check_out">付款</string>
+    <string name="order_placed">已下单</string>
+    <string name="your_order_is_placed">下单成功，我们将尽快处理</string>
+    <string name="order_information">此单详情：</string>
+    <string name="signin">请登录</string>
+
+    <string name="first_name">  名</string>
+    <string name="last_name">  姓</string>
+    <string name="address">  地址</string>
+    <string name="emailsignup">  电子邮箱</string>
+    <string name="sign_up">注册</string>
+    <string name="password">  密码</string>
+    <string name="mobilesignup">  手机号</string>
+
+    <string name="cantbeempty">不能为空</string>
+    <string name="invalidphone">不是一个有效电话号！</string>
+    <string name="invalidemail">不是一个有效电子邮箱！</string>
+    <string name="createanaccount">注册</string>
+
+    <string name="update_profile">更新个人信息</string>
+    <string name="my_order">我的订单</string>
+    <string name="shopping_cart">购物车</string>
+    <string name="wish_list">心愿单</string>
+    <string name="log_out">登出</string>
+    <string name="totalamount">总价: $</string>
+    <string name="shoppingcart">购物车</string>
+    <string name="updateprofile">更新</string>
+    <string name="go_back">返回</string>
+
+</resources>
